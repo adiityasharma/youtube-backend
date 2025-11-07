@@ -33,9 +33,9 @@ app.use((err, req, res, next) => {
     data: null,
     message: err.message || "Internal server error"
   }
-  if (process.env.NODE_ENV !== "production") {
-    response.stack = err.stack
-  }
+  // if (process.env.NODE_ENV !== "production") {
+  //   response.stack = err.stack
+  // }
   res.status(status).json(response)
 })
 
